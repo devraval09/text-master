@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+      /* Colorful animation for text area */
+      @keyframes colorShift {
+        0% {
+          background-color: #f0f8ff;
+        }
+        50% {
+          background-color: #ffeb3b;
+        }
+        100% {
+          background-color: #f0f8ff;
+        }
+      }
+
+      /* Apply the colorShift animation to the textarea */
+      #text1 {
+        animation: colorShift 4s infinite alternate;
+        background-color: #f0f8ff; /* Starting background color */
+      }
+
+      /* Colorful button animation */
+      @keyframes colorBounce {
+        0% {
+          background-color: #28a745;
+          color: white;
+        }
+        25% {
+          background-color: #ff9800;
+          color: white;
+        }
+        50% {
+          background-color: #e91e63;
+          color: white;
+        }
+        75% {
+          background-color: #9c27b0;
+          color: white;
+        }
+        100% {
+          background-color: #28a745;
+          color: white;
+        }
+      }
+
+      .btn-outline-success {
+        animation: colorBounce 5s infinite alternate;
+        background-color: #28a745; /* Initial background */
+        color: white; /* Set initial color for text */
+        border-color: #28a745; /* Initial border color */
+      }
+
+      /* Hover effects on form elements */
+      .form-control:hover, .btn:hover {
+        border-color: #ff4081;
+        box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5);
+      }
+
+      .form-check-label:hover {
+        color: #ff4081;
+      }
+
+      /* Colorful switch animation */
+      @keyframes switchColor {
+        0% {
+          border-color: #007bff;
+        }
+        50% {
+          border-color: #ff4081;
+        }
+        100% {
+          border-color: #007bff;
+        }
+      }
+
+      .form-check-input {
+        animation: switchColor 3s infinite;
+      }
+    </style>
+
+    <title>Text-master</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__fadeIn">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Text-Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/trancelete">Trancelete</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2 animate__animated animate__fadeIn" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success animate__animated animate__bounceIn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form action="/analyze" class="animate__animated animate__fadeInUp">
+              <div class="mb-3">
+                <label for="text1" class="form-label animate__animated animate__fadeIn">Enter your text here....</label>
+                <textarea class="form-control m-2 animate__animated animate__zoomIn" id="text1" rows="3" name="text1"></textarea> 
+                
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="upper" role="switch" id="upper">
+                  <label class="form-check-label" for="upper">Convert To Upper Case</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="lower" role="switch" id="lower">
+                  <label class="form-check-label" for="lower">Convert To Lower Case</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="length" role="switch" id="Length">
+                  <label class="form-check-label" for="Length">Count length</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="strip" role="switch" id="strip">
+                  <label class="form-check-label" for="strip">Convert to strip</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="lstrip" role="switch" id="lstrip">
+                  <label class="form-check-label" for="lstrip">Convert to lstrip</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="rstrip" role="switch" id="rstrip">
+                  <label class="form-check-label" for="rstrip">Convert to rstrip</label>
+                </div>
+                <div class="form-check form-switch animate__animated animate__fadeInUp">
+                  <input class="form-check-input" type="checkbox" name="englisttohindi" role="switch" id="englisttohindi">
+                  <label class="form-check-label" for="englisttohindi">English To Hindi</label>
+                </div>
+                
+                <input class="btn btn-outline-success m-2 animate__animated animate__bounceIn" type="submit" value="Analyze your text">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>

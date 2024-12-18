@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+      /* Colorful animation for the navbar */
+      @keyframes navbarColorShift {
+        0% {
+          background-color: #343a40;
+        }
+        50% {
+          background-color: #28a745;
+        }
+        100% {
+          background-color: #343a40;
+        }
+      }
+
+      .navbar {
+        animation: navbarColorShift 5s infinite alternate;
+      }
+
+      /* Heading animation */
+      @keyframes headingColorChange {
+        0% {
+          color: #ffeb3b;
+        }
+        50% {
+          color: #ff4081;
+        }
+        100% {
+          color: #4caf50;
+        }
+      }
+
+      h1 {
+        animation: headingColorChange 4s infinite alternate;
+      }
+
+      /* Button animation */
+      @keyframes buttonColorShift {
+        0% {
+          background-color: #007bff;
+        }
+        50% {
+          background-color: #ff9800;
+        }
+        100% {
+          background-color: #007bff;
+        }
+      }
+
+      .btn-outline-success {
+        animation: buttonColorShift 4s infinite alternate;
+      }
+
+      /* Hover effect on heading */
+      h1:hover {
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.3s ease-in-out;
+      }
+
+      /* Smooth fade-in for the text */
+      .animate__animated {
+        animation-duration: 2s;
+      }
+
+      .animate__fadeIn {
+        animation-name: fadeIn;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <title>Text-master</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__fadeIn">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Text-Master</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/trancelete">Trancelete</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 animate__animated animate__fadeIn" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success animate__animated animate__bounceIn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  <h1 class="animate__animated animate__fadeIn">Your analyzed text: {{text}}</h1>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
